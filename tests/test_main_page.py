@@ -30,7 +30,16 @@ def test_to_search(driver):
     driver.get(URL)
     main_page= Main_page(driver)
     main_page.input_to_the_search()
-    time.sleep(5)
+
+@pytest.mark.regress
+def test_click_to_the_auto_products(driver):
+    driver.get(URL)
+    main_page = Main_page(driver)
+    main_page.click_to_the_button_auto_products()
+
+
+
+
 
 
 
