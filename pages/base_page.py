@@ -1,3 +1,4 @@
+from selenium.webdriver import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -27,3 +28,8 @@ class BasePage:
             return True
         except:
             return False
+
+    def submit_the_value(self,locator,timeout=10):
+        element = self.find_element(locator,timeout)
+        element.click()
+        element.send_keys(Keys.ENTER)
