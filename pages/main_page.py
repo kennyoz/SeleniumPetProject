@@ -43,13 +43,13 @@ class Main_page(BasePage):
         self.click_element(Main_page.catalog_button)
         self.is_element_visible(Main_page.move_to_catalog_assert)
 
-    def input_to_the_search(self):
+    def input_to_the_search(self):                                                     #Проверка search на инпут
         self.enter_text(Main_page.search_input,Main_page.search_input_text)
         self.submit_the_value(Main_page.search_input)
         self.is_element_visible(Main_page.find_after_search)
 
 
-    def click_to_the_button_auto_products(self):
+    def click_to_the_button_auto_products(self):                                        #Проверка кнопки "Автотовары"
         self.click_element(Main_page.button_auto_products)
         self.is_element_visible(Main_page.auto_products_assert_to_move)
 
